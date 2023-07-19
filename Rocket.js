@@ -46,7 +46,7 @@ class Rocket {
   update() {
     let d = dist(this.vec.x, this.vec.y, target.vec.x, target.vec.y);
     let colorRatio = map(d, 0, 500, 255, 0);
-    this.fill = color(0, colorRatio, 0, 255);
+    this.fill = color(colorRatio, 255-colorRatio, colorRatio, 155);
     this.checkObstacleCollision();
 
     if(this.collided && this.timeAlive == 0) {
